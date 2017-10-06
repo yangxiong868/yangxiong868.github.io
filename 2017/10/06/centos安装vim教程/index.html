@@ -50,19 +50,19 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=" color="#222">
 
 
 
@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Josh&#39;s Blog">
 <meta property="og:description" content="yum安装Vim1.先卸载老的vim1yum remove vim-* -y 2.下载第三方yum源1wget -P /etc/yum.repos.d/  https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim8-epel-7.repo 3.安装vim1yum -y install vim-enhanced">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-06T10:40:26.946Z">
+<meta property="og:updated_time" content="2017-10-06T10:56:57.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos安装vim教程">
 <meta name="twitter:description" content="yum安装Vim1.先卸载老的vim1yum remove vim-* -y 2.下载第三方yum源1wget -P /etc/yum.repos.d/  https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim8-epel-7.repo 3.安装vim1yum -y install vim-enhanced">
@@ -101,7 +101,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.3',
+    version: '',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
@@ -193,22 +193,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -382,7 +382,7 @@
 <p>3.安装vim<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install vim-enhanced sudo</div></pre></td></tr></table></figure></p>
 <p>4.验证vim版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">rpm -qa |grep vim</div><div class="line">vim-enhanced-8.0.0704-1.1.26.el7.centos.x86_64</div><div class="line">vim-common-8.0.0704-1.1.26.el7.centos.x86_64</div><div class="line">vim-minimal-8.0.0704-1.1.26.el7.centos.x86_64</div><div class="line">vim-filesystem-8.0.0704-1.1.26.el7.centos.x86_64</div></pre></td></tr></table></figure></p>
 <p>安装过程遇到的依赖问题“libc.so.6 is needed by XXX”解决方法<br>参考：<a href="http://www.cnblogs.com/think3t/p/4165102.html" target="_blank" rel="external">http://www.cnblogs.com/think3t/p/4165102.html</a><br>总结：在安装rpm包的时候，如果出现类似libc.so.6 is needed by XXX的依赖问题，首先检查一下本机是否安装了相应的依赖库；如果本机确实已经安装了所需的依赖库而问题依旧，那就试试把相应的兼容包安装一下，问题应该就能迎刃而解了！</p>
-<h3 id="rpm包安装Vim"><a href="#rpm包安装Vim" class="headerlink" title="rpm包安装Vim"></a>rpm包安装Vim</h3><p>1.Vim安装需要的四个rpm包如下：<br>vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm<br>vim-common-7.4.629-5.el6_8.1.x86_64.rpm<br>vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm<br>vim-minimal-7.4.629-5.el6_8.1.x86_64.rpm</p>
+<h3 id="rpm包安装Vim"><a href="#rpm包安装Vim" class="headerlink" title="rpm包安装Vim"></a>rpm包安装Vim</h3><p>1.Vim安装需要的四个rpm包如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm</div><div class="line">vim-common-7.4.629-5.el6_8.1.x86_64.rpm</div><div class="line">vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm  </div><div class="line">vim-minimal-7.4.629-5.el6_8.1.x86_64.rpm</div></pre></td></tr></table></figure></p>
 <p>2.登录<a href="https://www.rpmfind.net/linux/rpm2html/search.php" target="_blank" rel="external">rpmfind网站</a>，下载vim的rpm包，注：<strong>centos只有7.4版本vim包</strong></p>
 <p>vim有四个包，下面是按照顺序</p>
 <p>3.使用rpm命令安装Vim包，按照1中的顺序依次安装。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -ivh 包名</div></pre></td></tr></table></figure></p>
@@ -627,7 +627,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v</div>
 
 
 
@@ -715,25 +715,25 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v="></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v="></script>
 
 
 
   
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
+<script type="text/javascript" src="/js/src/post-details.js?v="></script>
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v="></script>
 
 
 
