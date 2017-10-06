@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[centos安装vim教程]]></title>
+    <url>%2F2017%2F10%2F06%2Fcentos%E5%AE%89%E8%A3%85vim%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[yum安装Vim1.先卸载老的vim1yum remove vim-* -y 2.下载第三方yum源1wget -P /etc/yum.repos.d/ https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim8-epel-7.repo 3.安装vim1yum -y install vim-enhanced sudo 4.验证vim版本12345rpm -qa |grep vimvim-enhanced-8.0.0704-1.1.26.el7.centos.x86_64vim-common-8.0.0704-1.1.26.el7.centos.x86_64vim-minimal-8.0.0704-1.1.26.el7.centos.x86_64vim-filesystem-8.0.0704-1.1.26.el7.centos.x86_64 安装过程遇到的依赖问题“libc.so.6 is needed by XXX”解决方法参考：http://www.cnblogs.com/think3t/p/4165102.html总结：在安装rpm包的时候，如果出现类似libc.so.6 is needed by XXX的依赖问题，首先检查一下本机是否安装了相应的依赖库；如果本机确实已经安装了所需的依赖库而问题依旧，那就试试把相应的兼容包安装一下，问题应该就能迎刃而解了！ rpm包安装Vim1.Vim安装需要的四个rpm包如下：vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpmvim-common-7.4.629-5.el6_8.1.x86_64.rpmvim-enhanced-7.4.629-5.el6_8.1.x86_64.rpmvim-minimal-7.4.629-5.el6_8.1.x86_64.rpm 2.登录rpmfind网站，下载vim的rpm包，注：centos只有7.4版本vim包 vim有四个包，下面是按照顺序 3.使用rpm命令安装Vim包，按照1中的顺序依次安装。1rpm -ivh 包名 4.查看vim版本号1vim --version | head 源码安装Vim1.安装依赖1yum -y install ruby perl-devel python-devel ruby-devel perl-ExtUtils-Embed ncurses-devel 2.源码下载源码下载方法一：克隆源码12git clone https://github.com/vim/vim.gitcd vim/ 源码下载方法二：下载压缩包1234wget https://github.com/vim/vim/archive/master.zipunzip master.zipcd vim-mastercd src/ 3.源码编译1234./configure --prefix=/usr/local --enable-multibyte --with-tlib=tinfo --enable-pythoninterp --enable-rubyinterp \--with-ruby-command=/usr/bin/ruby --with-features=hugemakemake install 4.查看vim版本号1vim --version | head]]></content>
+      <categories>
+        <category>linux基础</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2017%2F10%2F05%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
