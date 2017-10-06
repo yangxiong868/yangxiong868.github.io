@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Josh&#39;s Blog">
 <meta property="og:description" content="yum安装Vim1.先卸载老的vim1yum remove vim-* -y 2.下载第三方yum源1wget -P /etc/yum.repos.d/  https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim8-epel-7.repo 3.安装vim1yum -y install vim-enhanced">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-06T10:56:57.473Z">
+<meta property="og:updated_time" content="2017-10-06T11:00:57.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos安装vim教程">
 <meta name="twitter:description" content="yum安装Vim1.先卸载老的vim1yum remove vim-* -y 2.下载第三方yum源1wget -P /etc/yum.repos.d/  https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim8-epel-7.repo 3.安装vim1yum -y install vim-enhanced">
@@ -381,7 +381,7 @@
 <p>2.下载第三方yum源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget -P /etc/yum.repos.d/  https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim8-epel-7.repo</div></pre></td></tr></table></figure></p>
 <p>3.安装vim<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install vim-enhanced sudo</div></pre></td></tr></table></figure></p>
 <p>4.验证vim版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">rpm -qa |grep vim</div><div class="line">vim-enhanced-8.0.0704-1.1.26.el7.centos.x86_64</div><div class="line">vim-common-8.0.0704-1.1.26.el7.centos.x86_64</div><div class="line">vim-minimal-8.0.0704-1.1.26.el7.centos.x86_64</div><div class="line">vim-filesystem-8.0.0704-1.1.26.el7.centos.x86_64</div></pre></td></tr></table></figure></p>
-<p>安装过程遇到的依赖问题“libc.so.6 is needed by XXX”解决方法<br>参考：<a href="http://www.cnblogs.com/think3t/p/4165102.html" target="_blank" rel="external">http://www.cnblogs.com/think3t/p/4165102.html</a><br>总结：在安装rpm包的时候，如果出现类似libc.so.6 is needed by XXX的依赖问题，首先检查一下本机是否安装了相应的依赖库；如果本机确实已经安装了所需的依赖库而问题依旧，那就试试把相应的兼容包安装一下，问题应该就能迎刃而解了！</p>
+<p>安装过程遇到的依赖问题“libc.so.6 is needed by XXX”解决方法<br>参考：<a href="http://www.cnblogs.com/think3t/p/4165102.html" target="_blank" rel="external">http://www.cnblogs.com/think3t/p/4165102.html</a></p>
 <h3 id="rpm包安装Vim"><a href="#rpm包安装Vim" class="headerlink" title="rpm包安装Vim"></a>rpm包安装Vim</h3><p>1.Vim安装需要的四个rpm包如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vim-filesystem-7.4.629-5.el6_8.1.x86_64.rpm</div><div class="line">vim-common-7.4.629-5.el6_8.1.x86_64.rpm</div><div class="line">vim-enhanced-7.4.629-5.el6_8.1.x86_64.rpm  </div><div class="line">vim-minimal-7.4.629-5.el6_8.1.x86_64.rpm</div></pre></td></tr></table></figure></p>
 <p>2.登录<a href="https://www.rpmfind.net/linux/rpm2html/search.php" target="_blank" rel="external">rpmfind网站</a>，下载vim的rpm包，注：<strong>centos只有7.4版本vim包</strong></p>
 <p>vim有四个包，下面是按照顺序</p>
@@ -433,6 +433,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/06/rpm和yum常用命令/" rel="prev" title="rpm和yum常用命令">
+                rpm和yum常用命令 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -511,7 +515,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -533,7 +537,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
