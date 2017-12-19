@@ -13,7 +13,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[[Python基础]枚举类]]></title>
+    <title><![CDATA[Python基础-枚举类]]></title>
     <url>%2F2017%2F12%2F19%2FPython%E5%9F%BA%E7%A1%80-%E6%9E%9A%E4%B8%BE%E7%B1%BB%2F</url>
     <content type="text"><![CDATA[Python基础枚举类有两种实现方法第一种方法：定义常量，变量名称大写，例如月份：123456JAN = 1FEB = 2MAR = 3...NOV = 11DEC = 12 第二种方法：从Enum派生出自定义枚举类，unique装饰器可以帮助我们检查保证没有重复值，例如星期：1234567891011from enum import Enum, unique @uniqueclass Weekday(Enum): Sun = 0 Mon = 1 Tue = 2 Wed = 3 Thu = 4 Fri = 5 Sat = 6 访问枚举类型的若干方法如下，可见在实际使用中既可以用成员名称引用枚举常量，又可以直接根据value的值获得枚举常量。123456789101112131415161718192021&gt;&gt;&gt; print (Weekday.Mon)Weekday.Mon&gt;&gt;&gt; print (Weekday['Tue'])Weekday.Tue&gt;&gt;&gt; type(Weekday.Mon)&lt;enum 'Weekday'&gt;&gt;&gt;&gt; print(Weekday.Mon.value)1&gt;&gt;&gt; print(Weekday(1))Weekday.Mon&gt;&gt;&gt; for name, member in Weekday.__members__.items():... print(name, '=&gt;', member)... ('Sun', '=&gt;', &lt;Weekday.Sun: 0&gt;)('Mon', '=&gt;', &lt;Weekday.Mon: 1&gt;)('Tue', '=&gt;', &lt;Weekday.Tue: 2&gt;)('Wed', '=&gt;', &lt;Weekday.Wed: 3&gt;)('Thu', '=&gt;', &lt;Weekday.Thu: 4&gt;)('Fri', '=&gt;', &lt;Weekday.Fri: 5&gt;)('Sat', '=&gt;', &lt;Weekday.Sat: 6&gt;)&gt;&gt;&gt;]]></content>
       <categories>
