@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/03/11/Python%E8%BF%9B%E9%98%B6-%E8%AE%A1%E7%AE%97%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4/</loc>
+    
+    <lastmod>2018-03-11T13:32:45.045Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/10/06/Linux%E5%9F%BA%E7%A1%80-VIM%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2017-12-20T15:58:34.446Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://yoursite.com/2017/12/19/Python%E5%9F%BA%E7%A1%80-%E6%9E%9A%E4%B8%BE%E7%B1%BB/</loc>
     
     <lastmod>2017-12-19T16:33:54.872Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/10/05/hello-world/</loc>
-    
-    <lastmod>2017-10-05T09:04:03.385Z</lastmod>
     
   </url>
   
