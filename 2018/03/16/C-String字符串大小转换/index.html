@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Python,Python基础," />
+  <meta name="keywords" content="C,C++,字符串," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Python基础枚举类有两种实现方法第一种方法：定义常量，变量名称大写，例如月份：123456JAN = 1FEB = 2MAR = 3...NOV = 11DEC = 12 第二种方法：从Enum派生出自定义枚举类，unique装饰器可以帮助我们检查保证没有重复值，例如星期：1234567891011from enum import Enum, unique @uniqueclass Weekd">
-<meta name="keywords" content="Python,Python基础">
+<meta name="description" content="1.Boost.StringAlgorithms库大小转换函数大小写转换API：boost::algorithm::to_upper_copy()boost::algorithm::to_lower_copy()boost::algorithm::to_upper() //修改原string字符串boost::algorithm::to_lower() //修改原string字符串 代码示例：12">
+<meta name="keywords" content="C,C++,字符串">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python基础-枚举类">
-<meta property="og:url" content="http://yoursite.com/2017/12/19/Python基础-枚举类/index.html">
+<meta property="og:title" content="C++ String字符串大小转换">
+<meta property="og:url" content="http://yoursite.com/2018/03/16/C-String字符串大小转换/index.html">
 <meta property="og:site_name" content="Josh&#39;s Blog">
-<meta property="og:description" content="Python基础枚举类有两种实现方法第一种方法：定义常量，变量名称大写，例如月份：123456JAN = 1FEB = 2MAR = 3...NOV = 11DEC = 12 第二种方法：从Enum派生出自定义枚举类，unique装饰器可以帮助我们检查保证没有重复值，例如星期：1234567891011from enum import Enum, unique @uniqueclass Weekd">
+<meta property="og:description" content="1.Boost.StringAlgorithms库大小转换函数大小写转换API：boost::algorithm::to_upper_copy()boost::algorithm::to_lower_copy()boost::algorithm::to_upper() //修改原string字符串boost::algorithm::to_lower() //修改原string字符串 代码示例：12">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-19T16:33:54.872Z">
+<meta property="og:updated_time" content="2018-03-16T00:57:04.513Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python基础-枚举类">
-<meta name="twitter:description" content="Python基础枚举类有两种实现方法第一种方法：定义常量，变量名称大写，例如月份：123456JAN = 1FEB = 2MAR = 3...NOV = 11DEC = 12 第二种方法：从Enum派生出自定义枚举类，unique装饰器可以帮助我们检查保证没有重复值，例如星期：1234567891011from enum import Enum, unique @uniqueclass Weekd">
+<meta name="twitter:title" content="C++ String字符串大小转换">
+<meta name="twitter:description" content="1.Boost.StringAlgorithms库大小转换函数大小写转换API：boost::algorithm::to_upper_copy()boost::algorithm::to_lower_copy()boost::algorithm::to_upper() //修改原string字符串boost::algorithm::to_lower() //修改原string字符串 代码示例：12">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/19/Python基础-枚举类/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/16/C-String字符串大小转换/"/>
 
 
 
 
 
-  <title>Python基础-枚举类 | Josh's Blog</title>
+  <title>C++ String字符串大小转换 | Josh's Blog</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/Python基础-枚举类/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/16/C-String字符串大小转换/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Josh Yang">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python基础-枚举类</h1>
+          <h1 class="post-title" itemprop="name headline">C++ String字符串大小转换</h1>
         
 
         <div class="post-meta">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T23:03:35+08:00">
-                2017-12-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-16T07:34:05+08:00">
+                2018-03-16
               </time>
             
 
@@ -341,8 +341,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/C-C/" itemprop="url" rel="index">
+                    <span itemprop="name">C/C++</span>
                   </a>
                 </span>
 
@@ -377,9 +377,13 @@
       
 
       
-        <p>Python基础枚举类有两种实现方法<br>第一种方法：定义常量，变量名称大写，例如月份：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">JAN = <span class="number">1</span></div><div class="line">FEB = <span class="number">2</span></div><div class="line">MAR = <span class="number">3</span></div><div class="line">...</div><div class="line">NOV = <span class="number">11</span></div><div class="line">DEC = <span class="number">12</span></div></pre></td></tr></table></figure></p>
-<p>第二种方法：从Enum派生出自定义枚举类，unique装饰器可以帮助我们检查保证没有重复值，例如星期：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum, unique</div><div class="line"> </div><div class="line"><span class="meta">@unique</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Weekday</span><span class="params">(Enum)</span>:</span></div><div class="line">    Sun = <span class="number">0</span></div><div class="line">    Mon = <span class="number">1</span></div><div class="line">    Tue = <span class="number">2</span></div><div class="line">    Wed = <span class="number">3</span></div><div class="line">    Thu = <span class="number">4</span></div><div class="line">    Fri = <span class="number">5</span></div><div class="line">    Sat = <span class="number">6</span></div></pre></td></tr></table></figure></p>
-<p>访问枚举类型的若干方法如下，可见在实际使用中既可以用成员名称引用枚举常量，又可以直接根据value的值获得枚举常量。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> (Weekday.Mon)</div><div class="line">Weekday.Mon</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> (Weekday[<span class="string">'Tue'</span>])</div><div class="line">Weekday.Tue</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(Weekday.Mon)</div><div class="line">&lt;enum <span class="string">'Weekday'</span>&gt;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(Weekday.Mon.value)</div><div class="line"><span class="number">1</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(Weekday(<span class="number">1</span>))</div><div class="line">Weekday.Mon</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> name, member <span class="keyword">in</span> Weekday.__members__.items():</div><div class="line"><span class="meta">... </span>     print(name, <span class="string">'=&gt;'</span>, member)</div><div class="line"><span class="meta">... </span></div><div class="line">(<span class="string">'Sun'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Sun: <span class="number">0</span>&gt;)</div><div class="line">(<span class="string">'Mon'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Mon: <span class="number">1</span>&gt;)</div><div class="line">(<span class="string">'Tue'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Tue: <span class="number">2</span>&gt;)</div><div class="line">(<span class="string">'Wed'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Wed: <span class="number">3</span>&gt;)</div><div class="line">(<span class="string">'Thu'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Thu: <span class="number">4</span>&gt;)</div><div class="line">(<span class="string">'Fri'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Fri: <span class="number">5</span>&gt;)</div><div class="line">(<span class="string">'Sat'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Sat: <span class="number">6</span>&gt;)</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure></p>
+        <h4 id="1-Boost-StringAlgorithms库大小转换函数"><a href="#1-Boost-StringAlgorithms库大小转换函数" class="headerlink" title="1.Boost.StringAlgorithms库大小转换函数"></a>1.Boost.StringAlgorithms库大小转换函数</h4><p>大小写转换API：<br>boost::algorithm::to_upper_copy()<br>boost::algorithm::to_lower_copy()<br>boost::algorithm::to_upper() //修改原string字符串<br>boost::algorithm::to_lower() //修改原string字符串</p>
+<p>代码示例：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/algorithm/string.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> boost::algorithm;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> s = <span class="string">"Boost C++ Libraries"</span>;</div><div class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; to_upper_copy(s) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">BOOST C++ LIBRARIES</div></pre></td></tr></table></figure></p>
+<h4 id="2-STL库transform模板函数实现"><a href="#2-STL库transform模板函数实现" class="headerlink" title="2.STL库transform模板函数实现"></a>2.STL库transform模板函数实现</h4><p>我们利用STL库提供transform模板函数，动作是toupper或tolower，完成std::string大(小)写转换的功能。</p>
+<p>代码示例：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> s = <span class="string">"Boost C++ Libraries"</span>;</div><div class="line">  <span class="built_in">std</span>::transform(s.begin(), s.end(), s.begin(), ::<span class="built_in">toupper</span>);</div><div class="line">  <span class="comment">// std::transform(s.begin(), s.end(), s.begin(), ::tolower);</span></div><div class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">BOOST C++ LIBRARIES</div></pre></td></tr></table></figure></p>
+<h4 id="3-参考链接"><a href="#3-参考链接" class="headerlink" title="3.参考链接"></a>3.参考链接</h4><p>1.<a href="https://theboostcpplibraries.com/boost.stringalgorithms" target="_blank" rel="external">Chapter 5. Boost.StringAlgorithms</a><br>2.<a href="http://www.vimer.cn/archives/495.html" target="_blank" rel="external">string转化大小写(C++)</a><br>3.<a href="http://zh.cppreference.com/w/cpp/algorithm/transform" target="_blank" rel="external">std::transform</a></p>
 
       
     </div>
@@ -397,9 +401,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/C/" rel="tag"># C</a>
           
-            <a href="/tags/Python基础/" rel="tag"># Python基础</a>
+            <a href="/tags/C/" rel="tag"># C++</a>
+          
+            <a href="/tags/字符串/" rel="tag"># 字符串</a>
           
         </div>
       
@@ -412,8 +418,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/06/Linux基础-rpm和yum常用命令/" rel="next" title="Linux基础-rpm和yum常用命令">
-                <i class="fa fa-chevron-left"></i> Linux基础-rpm和yum常用命令
+              <a href="/2018/03/12/rapidjson库的json字符串读写/" rel="next" title="rapidjson库的json字符串读写">
+                <i class="fa fa-chevron-left"></i> rapidjson库的json字符串读写
               </a>
             
           </div>
@@ -422,8 +428,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/20/Python进阶-csv文件读写/" rel="prev" title="Python进阶-csv文件读写">
-                Python进阶-csv文件读写 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/16/C-String删除所有的某个特定字符/" rel="prev" title="C++ String删除所有的某个特定字符">
+                C++ String删除所有的某个特定字符 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -474,8 +480,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -562,6 +577,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Boost-StringAlgorithms库大小转换函数"><span class="nav-number">1.</span> <span class="nav-text">1.Boost.StringAlgorithms库大小转换函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-STL库transform模板函数实现"><span class="nav-number">2.</span> <span class="nav-text">2.STL库transform模板函数实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-参考链接"><span class="nav-number">3.</span> <span class="nav-text">3.参考链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

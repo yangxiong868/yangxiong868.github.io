@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Python,Python基础," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -81,18 +81,13 @@
 
 
 
-<meta name="description" content="Python基础枚举类有两种实现方法第一种方法：定义常量，变量名称大写，例如月份：123456JAN = 1FEB = 2MAR = 3...NOV = 11DEC = 12 第二种方法：从Enum派生出自定义枚举类，unique装饰器可以帮助我们检查保证没有重复值，例如星期：1234567891011from enum import Enum, unique @uniqueclass Weekd">
-<meta name="keywords" content="Python,Python基础">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Python基础-枚举类">
-<meta property="og:url" content="http://yoursite.com/2017/12/19/Python基础-枚举类/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Josh&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Josh&#39;s Blog">
-<meta property="og:description" content="Python基础枚举类有两种实现方法第一种方法：定义常量，变量名称大写，例如月份：123456JAN = 1FEB = 2MAR = 3...NOV = 11DEC = 12 第二种方法：从Enum派生出自定义枚举类，unique装饰器可以帮助我们检查保证没有重复值，例如星期：1234567891011from enum import Enum, unique @uniqueclass Weekd">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-19T16:33:54.872Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python基础-枚举类">
-<meta name="twitter:description" content="Python基础枚举类有两种实现方法第一种方法：定义常量，变量名称大写，例如月份：123456JAN = 1FEB = 2MAR = 3...NOV = 11DEC = 12 第二种方法：从Enum派生出自定义枚举类，unique装饰器可以帮助我们检查保证没有重复值，例如星期：1234567891011from enum import Enum, unique @uniqueclass Weekd">
+<meta name="twitter:title" content="Josh&#39;s Blog">
 
 
 
@@ -122,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/19/Python基础-枚举类/"/>
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
 
 
 
 
 
-  <title>Python基础-枚举类 | Josh's Blog</title>
+  <title>Josh's Blog</title>
   
 
 
@@ -147,7 +142,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -274,9 +270,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -289,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/Python基础-枚举类/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/06/Linux基础-VIM安装教程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Josh Yang">
@@ -306,7 +302,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python基础-枚举类</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/06/Linux基础-VIM安装教程/" itemprop="url">Linux基础-VIM安装教程</a></h1>
         
 
         <div class="post-meta">
@@ -318,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T23:03:35+08:00">
-                2017-12-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-06T17:36:06+08:00">
+                2017-10-06
               </time>
             
 
@@ -341,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/Linux基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux基础</span>
                   </a>
                 </span>
 
@@ -377,10 +375,19 @@
       
 
       
-        <p>Python基础枚举类有两种实现方法<br>第一种方法：定义常量，变量名称大写，例如月份：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">JAN = <span class="number">1</span></div><div class="line">FEB = <span class="number">2</span></div><div class="line">MAR = <span class="number">3</span></div><div class="line">...</div><div class="line">NOV = <span class="number">11</span></div><div class="line">DEC = <span class="number">12</span></div></pre></td></tr></table></figure></p>
-<p>第二种方法：从Enum派生出自定义枚举类，unique装饰器可以帮助我们检查保证没有重复值，例如星期：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum, unique</div><div class="line"> </div><div class="line"><span class="meta">@unique</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Weekday</span><span class="params">(Enum)</span>:</span></div><div class="line">    Sun = <span class="number">0</span></div><div class="line">    Mon = <span class="number">1</span></div><div class="line">    Tue = <span class="number">2</span></div><div class="line">    Wed = <span class="number">3</span></div><div class="line">    Thu = <span class="number">4</span></div><div class="line">    Fri = <span class="number">5</span></div><div class="line">    Sat = <span class="number">6</span></div></pre></td></tr></table></figure></p>
-<p>访问枚举类型的若干方法如下，可见在实际使用中既可以用成员名称引用枚举常量，又可以直接根据value的值获得枚举常量。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> (Weekday.Mon)</div><div class="line">Weekday.Mon</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> (Weekday[<span class="string">'Tue'</span>])</div><div class="line">Weekday.Tue</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(Weekday.Mon)</div><div class="line">&lt;enum <span class="string">'Weekday'</span>&gt;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(Weekday.Mon.value)</div><div class="line"><span class="number">1</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(Weekday(<span class="number">1</span>))</div><div class="line">Weekday.Mon</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> name, member <span class="keyword">in</span> Weekday.__members__.items():</div><div class="line"><span class="meta">... </span>     print(name, <span class="string">'=&gt;'</span>, member)</div><div class="line"><span class="meta">... </span></div><div class="line">(<span class="string">'Sun'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Sun: <span class="number">0</span>&gt;)</div><div class="line">(<span class="string">'Mon'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Mon: <span class="number">1</span>&gt;)</div><div class="line">(<span class="string">'Tue'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Tue: <span class="number">2</span>&gt;)</div><div class="line">(<span class="string">'Wed'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Wed: <span class="number">3</span>&gt;)</div><div class="line">(<span class="string">'Thu'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Thu: <span class="number">4</span>&gt;)</div><div class="line">(<span class="string">'Fri'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Fri: <span class="number">5</span>&gt;)</div><div class="line">(<span class="string">'Sat'</span>, <span class="string">'=&gt;'</span>, &lt;Weekday.Sat: <span class="number">6</span>&gt;)</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure></p>
-
+        
+          
+          yum安装Vim1.先卸载老的vim1yum remove vim-* -y
+2.下载第三方yum源1wget -P /etc/yum.repos.d/  https://copr.fedorainfracloud.org/coprs/mcepl/vim8/repo/epel-7/mcepl-vim
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/06/Linux基础-VIM安装教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
@@ -395,42 +402,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Python/" rel="tag"># Python</a>
-          
-            <a href="/tags/Python基础/" rel="tag"># Python基础</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/10/06/Linux基础-rpm和yum常用命令/" rel="next" title="Linux基础-rpm和yum常用命令">
-                <i class="fa fa-chevron-left"></i> Linux基础-rpm和yum常用命令
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/20/Python进阶-csv文件读写/" rel="prev" title="Python进阶-csv文件读写">
-                Python进阶-csv文件读写 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -440,11 +419,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -452,8 +434,6 @@
 
 
           
-  
-
 
         </div>
         
@@ -692,10 +672,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
-<script type="text/javascript" src="/js/src/post-details.js?v="></script>
-
-
 
   
 
