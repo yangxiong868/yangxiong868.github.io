@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python进阶-Pyinotify文件系统监控]]></title>
+    <url>%2F2018%2F03%2F17%2FPython%E8%BF%9B%E9%98%B6-Pyinotify%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9B%91%E6%8E%A7%2F</url>
+    <content type="text"><![CDATA[Pyinotify介绍Pyinotify 是一个简单而有用的 Python 模块，它可用于在 Linux 中实时监控文件系统更改。它依赖于 inotify（在内核 2.6.13 中纳入的 Linux 内核功能），它是一个事件驱动的通知程序，其通知通过三个系统调用从内核空间导出到用户空间。Pyinotify 既可以监视文件，也可以监视目录。 Pyinotify示例最近在工作中有个需求：监控业务数据文件的创建事件。在网上查找用 pyinotify模块可以很容易的实时监控文件系统更改或修改。12345678910111213141516171819202122232425262728293031323334353637#!/usr/bin/env python#coding = utf-8import osfrom pyinotify import WatchManager, Notifier, ProcessEventfrom pyinotify import IN_DELETE, IN_CREATE, IN_MODIFYclass EventHandler(ProcessEvent): def process_IN_CREATE(self, event): event_file = os.path.join(event.path, event.name) print "create file: %s " % event_file def process_IN_DELETE(self, event): event_file = os.path.join(event.path, event.name) print "delete file: %s " % event_file def process_IN_MODIFY(self, event): event_file = os.path.join(event.path, event.name) print "modify file: %s " % event_file def FSMonitor(path='.'): wm = WatchManager() mask = IN_DELETE | IN_MODIFY | IN_CREATE notifier = Notifier(wm, EventHandler()) wm.add_watch(path, mask, rec=True, auto_add=True) print "now starting monitor %s." % path while True: try: notifier.process_events() if notifier.check_events(): notifier.read_events() except KeyboardInterrupt: notifier.stop() breakif __name__ == "__main__": FSMonitor()]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Python进阶</tag>
+        <tag>Pyinotify</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[C++ String删除所有的某个特定字符]]></title>
     <url>%2F2018%2F03%2F16%2FC-String%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84%E6%9F%90%E4%B8%AA%E7%89%B9%E5%AE%9A%E5%AD%97%E7%AC%A6%2F</url>
     <content type="text"><![CDATA[1.remove和erase函数实现我们利用std::remove和boost::algorithm::erase函数实现从String中删除所有的某个特定字符，代码如下：s.erase(std::remove(s.begin(), s.end(), &#39;:&#39;), s.end());其中std::remove模板函数1234template&lt; class ForwardIt, class T &gt;ForwardIt remove( ForwardIt first, ForwardIt last, const T&amp; value );template&lt; class ForwardIt, class UnaryPredicate &gt;ForwardIt remove_if( ForwardIt first, ForwardIt last, UnaryPredicate p ); 从范围 [first, last) 移除所有满足特定判别标准的元素，并返回范围新结尾的尾后迭代器。1) 移除所有等于 value 的元素。2) 移除所有 p 对于它返回 true 的元素。 代码示例：123456789101112#include &lt;boost/algorithm/string.hpp&gt;#include &lt;iostream&gt;#include &lt;string&gt;using namespace boost::algorithm;int main() &#123; std::string s = "08:EF:13:AB:88:BI"; s.erase(std::remove(s.begin(), s.end(), ':'), s.end()); std::cout &lt;&lt; s &lt;&lt; '\n';&#125; 运行结果：108EF13AB88BI 2.remove_erase函数实现boost库remove_erase函数源码是采用remove和erase方法实现。代码示例：12345678910#include &lt;boost/range/algorithm_ext.hpp&gt;#include &lt;iostream&gt;#include &lt;string&gt;int main() &#123; std::string s = "08:EF:13:AB:88:BI"; boost::range::remove_erase(s, ':'); std::cout &lt;&lt; s &lt;&lt; '\n';&#125; 运行结果：108EF13AB88BI 3.参考链接1.C++从string中删除所有的某个特定字符2.std::remove, std::remove_if3.remove_erase documentation4.remove_erase source code]]></content>

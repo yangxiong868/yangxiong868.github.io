@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Python,Python进阶," />
+  <meta name="keywords" content="Python,Python进阶,Pyinotify," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Python第三方库Python读写Excel文件依赖第三方库：xlrd和xlwt。xlrd：可以读取.xls、.xlsx文件xlwt：可以写Excel文件，生成.xls格式后缀，但不可以直接修改Excel文件。下面使用pip安装xlrd和xlwt第三方库如下：12pip install xlrdpip install xlwt Python在线手册：http://www.python-excel">
-<meta name="keywords" content="Python,Python进阶">
+<meta name="description" content="Pyinotify介绍Pyinotify 是一个简单而有用的 Python 模块，它可用于在 Linux 中实时监控文件系统更改。它依赖于 inotify（在内核 2.6.13 中纳入的 Linux 内核功能），它是一个事件驱动的通知程序，其通知通过三个系统调用从内核空间导出到用户空间。Pyinotify 既可以监视文件，也可以监视目录。 Pyinotify示例最近在工作中有个需求：监控业务数据文">
+<meta name="keywords" content="Python,Python进阶,Pyinotify">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python进阶-Excel文件读写操作">
-<meta property="og:url" content="http://yoursite.com/2017/12/20/Python进阶-Excel文件读写操作/index.html">
+<meta property="og:title" content="Python进阶-Pyinotify文件系统监控">
+<meta property="og:url" content="http://yoursite.com/2018/03/17/Python进阶-Pyinotify文件系统监控/index.html">
 <meta property="og:site_name" content="Josh&#39;s Blog">
-<meta property="og:description" content="Python第三方库Python读写Excel文件依赖第三方库：xlrd和xlwt。xlrd：可以读取.xls、.xlsx文件xlwt：可以写Excel文件，生成.xls格式后缀，但不可以直接修改Excel文件。下面使用pip安装xlrd和xlwt第三方库如下：12pip install xlrdpip install xlwt Python在线手册：http://www.python-excel">
+<meta property="og:description" content="Pyinotify介绍Pyinotify 是一个简单而有用的 Python 模块，它可用于在 Linux 中实时监控文件系统更改。它依赖于 inotify（在内核 2.6.13 中纳入的 Linux 内核功能），它是一个事件驱动的通知程序，其通知通过三个系统调用从内核空间导出到用户空间。Pyinotify 既可以监视文件，也可以监视目录。 Pyinotify示例最近在工作中有个需求：监控业务数据文">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-20T15:50:56.795Z">
+<meta property="og:updated_time" content="2018-03-16T16:24:49.875Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python进阶-Excel文件读写操作">
-<meta name="twitter:description" content="Python第三方库Python读写Excel文件依赖第三方库：xlrd和xlwt。xlrd：可以读取.xls、.xlsx文件xlwt：可以写Excel文件，生成.xls格式后缀，但不可以直接修改Excel文件。下面使用pip安装xlrd和xlwt第三方库如下：12pip install xlrdpip install xlwt Python在线手册：http://www.python-excel">
+<meta name="twitter:title" content="Python进阶-Pyinotify文件系统监控">
+<meta name="twitter:description" content="Pyinotify介绍Pyinotify 是一个简单而有用的 Python 模块，它可用于在 Linux 中实时监控文件系统更改。它依赖于 inotify（在内核 2.6.13 中纳入的 Linux 内核功能），它是一个事件驱动的通知程序，其通知通过三个系统调用从内核空间导出到用户空间。Pyinotify 既可以监视文件，也可以监视目录。 Pyinotify示例最近在工作中有个需求：监控业务数据文">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/20/Python进阶-Excel文件读写操作/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/17/Python进阶-Pyinotify文件系统监控/"/>
 
 
 
 
 
-  <title>Python进阶-Excel文件读写操作 | Josh's Blog</title>
+  <title>Python进阶-Pyinotify文件系统监控 | Josh's Blog</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/20/Python进阶-Excel文件读写操作/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/17/Python进阶-Pyinotify文件系统监控/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Josh Yang">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python进阶-Excel文件读写操作</h1>
+          <h1 class="post-title" itemprop="name headline">Python进阶-Pyinotify文件系统监控</h1>
         
 
         <div class="post-meta">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-20T23:46:37+08:00">
-                2017-12-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-17T00:23:27+08:00">
+                2018-03-17
               </time>
             
 
@@ -377,37 +377,8 @@
       
 
       
-        <h4 id="Python第三方库"><a href="#Python第三方库" class="headerlink" title="Python第三方库"></a>Python第三方库</h4><p>Python读写Excel文件依赖第三方库：xlrd和xlwt。<br>xlrd：可以读取.xls、.xlsx文件<br>xlwt：可以写Excel文件，生成.xls格式后缀，但不可以直接修改Excel文件。<br>下面使用pip安装xlrd和xlwt第三方库如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip install xlrd</div><div class="line">pip install xlwt</div></pre></td></tr></table></figure></p>
-<p>Python在线手册：<a href="http://www.python-excel.org/" target="_blank" rel="external">http://www.python-excel.org/</a></p>
-<h4 id="Excel文件组织方式"><a href="#Excel文件组织方式" class="headerlink" title="Excel文件组织方式"></a>Excel文件组织方式</h4><p>每一个Excel数据文件从上至下分为三个层级的对象：<br>workbook： 每一个Excel文件就是一个workbook。<br>sheet： 每一个workbook中可以包含多个sheet，具体就对应Excel中我们在左下脚所看到的“sheet1”,“sheet2”等。<br>cell： 每一个sheet就是我们通常所看到的一个表格，可以含有m行，n列，每个确定的行号，列号所对应的一个格子就是一个cell。</p>
-<h4 id="Python-Excel文件读操作"><a href="#Python-Excel文件读操作" class="headerlink" title="Python Excel文件读操作"></a>Python Excel文件读操作</h4><ol>
-<li><p>导入模块<br>import xlrd   </p>
-</li>
-<li><p>打开Excel文件<br>book = xlrd.open_workbook(‘excelFile.xls’)</p>
-<p>Book类的方法、属性等：<br>book.nsheets: 在Book对象中的文件有多少个worksheet。<br>book.sheet_by_index(sheetx): 根据提供的sheetx索引来获取对应的sheet表，返回一个Sheet类的对象。<br>book.sheet_by_name(sheet_name): 根据提供的sheet_name来获取对应的sheet表，返回一个Sheet类的对象。<br>book.sheet_names(): 返回Book对象中的所有sheet表的名称列表。<br>book.sheets(): 返回在Book对象中所有的Sheet对象实例列表。</p>
-</li>
-<li><p>获取Excel文件工作表<br>sh = book.sheet_by_index(0) #通过索引顺序获取<br>sh = book.sheet_by_name(u’Sheet1’)#通过名称获取  </p>
-<p>Sheet类方法、属性等：<br>sh.cell(rowx, colx): 根据给出的行和列的参数获取得到cell类，返回一个Cell类实例对象<br>sh.cell_type(rowx, colx): 返回对应的cell对象的Type类型<br>sh.cell_value(rowx, colx): 返回对应的cell对象的value值<br>sh.col_values(colx): 返回指定列的所有cell对象的value值<br>sh.row_values(rowx): 返回指定的行的所有cell对象的value值<br>sh.name: 返回sheet对象的名称<br>sh.ncols: 返回在sheet对象中的列的数目<br>sh.nrows: 返回在sheet对象中的行的数目book = xlrd.open_workbook(‘excelFile.xls’)</p>
-</li>
-<li><p>获取Excel文件工作表cell的值：<br>cell=sh.cell(rowx=1, colx=1)   #根据输入行和列获返回一个Cell类对象，cell.value获取值<br>sh.cell_value(rowx=1, colx=1) ##根据输入行和列获返回一个Cell类对象的值</p>
-</li>
-</ol>
-<h4 id="Python-Excel文件写操作"><a href="#Python-Excel文件写操作" class="headerlink" title="Python Excel文件写操作"></a>Python Excel文件写操作</h4><ol>
-<li><p>导入模块<br>import xlwt</p>
-</li>
-<li><p>打开Excel文件<br>book = xlrd.Workbook(‘excelFile.xls’)</p>
-</li>
-<li><p>添加Excel文件工作表<br>sheet1 = wb.add_sheet(‘heet_name’)</p>
-</li>
-<li><p>写Excel文件工作表cell的值：<br>sheet1.write(0, 0, ‘test1’)<br>row1 = sheet1.row(1)<br>col1=sheet2.col(1)<br>row1.write(0, ‘test2’)<br>col1.write(1, ‘test3’)</p>
-</li>
-<li><p>保存Excel文件<br>wb.save(‘excelFile.xls’)</p>
-</li>
-</ol>
-<h4 id="Python-Excel文件读写操作示例"><a href="#Python-Excel文件读写操作示例" class="headerlink" title="Python Excel文件读写操作示例"></a>Python Excel文件读写操作示例</h4><p>Excel文件读写操作excel_handler.py示例：<br>1.读取inputfile文件内容，并保存到row_contents列表中；<br>2.将row_title和row_contents列表重新写到outputfile文件中；<br>3.执行：<code>python excel_handler.py personInfo.xlsx result.xls</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python</span></div><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> datetime</div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="keyword">import</span> xlrd</div><div class="line"><span class="keyword">import</span> xlwt</div><div class="line"></div><div class="line"><span class="keyword">from</span> time <span class="keyword">import</span> time</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">excel_file_read</span><span class="params">(filename)</span>:</span> </div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.isfile(filename):</div><div class="line">        <span class="keyword">print</span> (<span class="string">"%s is not file."</span> % filename)</div><div class="line">        <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        book = xlrd.open_workbook(filename)</div><div class="line">        sh = book.sheet_by_index(<span class="number">0</span>)</div><div class="line">    <span class="keyword">except</span>:</div><div class="line">        <span class="keyword">print</span> (<span class="string">"read %s open error."</span> % filename)</div><div class="line">        <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">    print(<span class="string">"Sheet name:%s, nrows:%d, ncols:%d"</span> % (sh.name, sh.nrows, sh.ncols))</div><div class="line"></div><div class="line">    row_contents = []</div><div class="line">    <span class="keyword">for</span> rx <span class="keyword">in</span> range(sh.nrows):</div><div class="line">        row_content = []</div><div class="line">        <span class="keyword">for</span> cx <span class="keyword">in</span> range(sh.ncols):</div><div class="line">            <span class="comment">#print sh.cell_value(rx, cx)</span></div><div class="line">            row_content.append(sh.cell_value(rx, cx))</div><div class="line">        row_contents.append(row_content)</div><div class="line">    <span class="comment">#print row_contents</span></div><div class="line">    </div><div class="line">    <span class="keyword">return</span> row_contents[<span class="number">1</span>:]</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">excel_file_write</span><span class="params">(filename, row_title, row_contents)</span>:</span></div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        wb = xlwt.Workbook()</div><div class="line">        ws = wb.add_sheet(<span class="string">"Sheet1"</span>)</div><div class="line">    <span class="keyword">except</span>:</div><div class="line">        <span class="keyword">print</span> (<span class="string">"write %s open error."</span> % filename)</div><div class="line">        <span class="keyword">return</span></div><div class="line"></div><div class="line">    <span class="keyword">for</span> col, col_content <span class="keyword">in</span> enumerate(row_title):</div><div class="line">        <span class="comment">#print col, col_content</span></div><div class="line">        ws.write(<span class="number">0</span>, col, col_content)</div><div class="line"></div><div class="line">    <span class="keyword">for</span> row, row_content <span class="keyword">in</span> enumerate(row_contents):</div><div class="line">        <span class="keyword">for</span> col, col_content <span class="keyword">in</span> enumerate(row_content):</div><div class="line">            <span class="comment">#print col, col_content</span></div><div class="line">            ws.write(row + <span class="number">1</span>, col, col_content)</div><div class="line"></div><div class="line">    wb.save(filename)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_opt_init</span><span class="params">(argv)</span>:</span></div><div class="line">    <span class="keyword">if</span> len(argv) &lt; <span class="number">3</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">"python excel_handler.py inputfile outputfile"</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">    <span class="keyword">if</span> len(argv) &gt;= <span class="number">3</span>:</div><div class="line">        inputfile = argv[<span class="number">1</span>]</div><div class="line">        outputfile = argv[<span class="number">2</span>]</div><div class="line">                   </div><div class="line">    <span class="keyword">return</span> inputfile, outputfile </div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span> :</div><div class="line">    start = time()</div><div class="line"></div><div class="line">    inputfile, outputfile = get_opt_init(sys.argv)</div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> inputfile <span class="keyword">and</span> outputfile:</div><div class="line">        sys.exit(<span class="number">0</span>)</div><div class="line"></div><div class="line">    row_contents = excel_file_read(inputfile)</div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> row_contents:</div><div class="line">        sys.exit(<span class="number">0</span>)</div><div class="line">		</div><div class="line">    row_title = [<span class="string">u'姓名'</span>, <span class="string">u'年龄'</span>, <span class="string">u'电话'</span>]</div><div class="line">    excel_file_write(outputfile, row_title, row_contents)</div><div class="line"></div><div class="line">    <span class="keyword">print</span> <span class="string">"Time cost %.2fs."</span> % (time() - start)</div></pre></td></tr></table></figure></p>
-<p><strong>遇到问题</strong><br>问题现象：执行脚本，在save方法报编码错误<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">File <span class="string">"excel_handler.py"</span>, line 55, <span class="keyword">in</span> excel_file_write</div><div class="line">  wb.save(filename)</div><div class="line">.......</div><div class="line">File <span class="string">"/usr/local/lib/python2.7/site-packages/xlwt/UnicodeUtils.py"</span>, line 50, <span class="keyword">in</span> upack2</div><div class="line">  us = unicode(s, encoding)</div></pre></td></tr></table></figure></p>
-<p>解决方法：<br>row_title = [‘姓名’, ‘年龄’, ‘电话’]修改成row_title = [u’姓名’, u’年龄’, u’电话’]</p>
-<p>参考链接：<br><a href="http://blog.sina.com.cn/s/blog_6babbcb8010182c3.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_6babbcb8010182c3.html</a><br><a href="http://blog.csdn.net/wangkai_123456/article/details/50457284" target="_blank" rel="external">http://blog.csdn.net/wangkai_123456/article/details/50457284</a></p>
+        <h4 id="Pyinotify介绍"><a href="#Pyinotify介绍" class="headerlink" title="Pyinotify介绍"></a>Pyinotify介绍</h4><p>Pyinotify 是一个简单而有用的 Python 模块，它可用于在 Linux 中实时监控文件系统更改。它依赖于 inotify（在内核 2.6.13 中纳入的 Linux 内核功能），它是一个事件驱动的通知程序，其通知通过三个系统调用从内核空间导出到用户空间。Pyinotify 既可以监视文件，也可以监视目录。</p>
+<h4 id="Pyinotify示例"><a href="#Pyinotify示例" class="headerlink" title="Pyinotify示例"></a>Pyinotify示例</h4><p>最近在工作中有个需求：监控业务数据文件的创建事件。在网上查找用 pyinotify模块可以很容易的实时监控文件系统更改或修改。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python</span></div><div class="line"><span class="comment">#coding = utf-8</span></div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">from</span> pyinotify <span class="keyword">import</span> WatchManager, Notifier, ProcessEvent</div><div class="line"><span class="keyword">from</span> pyinotify <span class="keyword">import</span> IN_DELETE, IN_CREATE, IN_MODIFY</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">EventHandler</span><span class="params">(ProcessEvent)</span>:</span></div><div class="line">     <span class="function"><span class="keyword">def</span> <span class="title">process_IN_CREATE</span><span class="params">(self, event)</span>:</span> </div><div class="line">         event_file = os.path.join(event.path, event.name)</div><div class="line">         <span class="keyword">print</span> <span class="string">"create file: %s "</span> % event_file </div><div class="line"></div><div class="line">     <span class="function"><span class="keyword">def</span> <span class="title">process_IN_DELETE</span><span class="params">(self, event)</span>:</span> </div><div class="line">         event_file = os.path.join(event.path, event.name)</div><div class="line">         <span class="keyword">print</span> <span class="string">"delete file: %s "</span> % event_file </div><div class="line"></div><div class="line">     <span class="function"><span class="keyword">def</span> <span class="title">process_IN_MODIFY</span><span class="params">(self, event)</span>:</span> </div><div class="line">         event_file = os.path.join(event.path, event.name)</div><div class="line">         <span class="keyword">print</span> <span class="string">"modify file: %s "</span> % event_file </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">FSMonitor</span><span class="params">(path=<span class="string">'.'</span>)</span>:</span></div><div class="line">     wm = WatchManager()</div><div class="line">     mask = IN_DELETE | IN_MODIFY | IN_CREATE</div><div class="line">     notifier = Notifier(wm, EventHandler())</div><div class="line">     wm.add_watch(path, mask, rec=<span class="keyword">True</span>, auto_add=<span class="keyword">True</span>)</div><div class="line">     <span class="keyword">print</span> <span class="string">"now starting monitor %s."</span> % path</div><div class="line"></div><div class="line">     <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">          <span class="keyword">try</span>:</div><div class="line">               notifier.process_events()</div><div class="line">               <span class="keyword">if</span> notifier.check_events():</div><div class="line">                   notifier.read_events()</div><div class="line">          <span class="keyword">except</span> KeyboardInterrupt:</div><div class="line">               notifier.stop()</div><div class="line">               <span class="keyword">break</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">     FSMonitor()</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -429,6 +400,8 @@
           
             <a href="/tags/Python进阶/" rel="tag"># Python进阶</a>
           
+            <a href="/tags/Pyinotify/" rel="tag"># Pyinotify</a>
+          
         </div>
       
 
@@ -440,8 +413,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/20/Python进阶-csv文件读写/" rel="next" title="Python进阶-csv文件读写">
-                <i class="fa fa-chevron-left"></i> Python进阶-csv文件读写
+              <a href="/2018/03/16/C-String删除所有的某个特定字符/" rel="next" title="C++ String删除所有的某个特定字符">
+                <i class="fa fa-chevron-left"></i> C++ String删除所有的某个特定字符
               </a>
             
           </div>
@@ -449,10 +422,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/11/Python进阶-计算程序运行时间/" rel="prev" title="Python进阶-计算程序运行时间">
-                Python进阶-计算程序运行时间 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -609,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Python第三方库"><span class="nav-number">1.</span> <span class="nav-text">Python第三方库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Excel文件组织方式"><span class="nav-number">2.</span> <span class="nav-text">Excel文件组织方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python-Excel文件读操作"><span class="nav-number">3.</span> <span class="nav-text">Python Excel文件读操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python-Excel文件写操作"><span class="nav-number">4.</span> <span class="nav-text">Python Excel文件写操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python-Excel文件读写操作示例"><span class="nav-number">5.</span> <span class="nav-text">Python Excel文件读写操作示例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Pyinotify介绍"><span class="nav-number">1.</span> <span class="nav-text">Pyinotify介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Pyinotify示例"><span class="nav-number">2.</span> <span class="nav-text">Pyinotify示例</span></a></li></ol></div>
             
 
           </div>
