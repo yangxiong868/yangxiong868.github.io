@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Josh&#39;s Blog">
 <meta property="og:description" content="时间结构体C/C++中常用的时间结构体有三种：time_t、struct tm、struct timeval。 time_t时间值time_t时间值在time.h中定义如下：1234#ifndef __TIME_T  #define __TIME_T  typedef  long  time_t;  #endif time_t是一个long型，表示从UTC时间(1970年1月1日00时00分00秒">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-22T00:07:38.300Z">
+<meta property="og:updated_time" content="2018-03-22T00:20:31.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C&#x2F;C++时间结构体与获取函数">
 <meta name="twitter:description" content="时间结构体C/C++中常用的时间结构体有三种：time_t、struct tm、struct timeval。 time_t时间值time_t时间值在time.h中定义如下：1234#ifndef __TIME_T  #define __TIME_T  typedef  long  time_t;  #endif time_t是一个long型，表示从UTC时间(1970年1月1日00时00分00秒">
@@ -453,10 +453,11 @@
 <p>程序运行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">The time now is 2016-12-19 10:39:24</div><div class="line">The time just was 2016-12-19 10:39:24</div></pre></td></tr></table></figure></p>
 <p>获取当前时间戳和字符串形式时间转换时间戳代码如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">time_t</span> get_timestamp(<span class="keyword">const</span> <span class="keyword">char</span> *date = <span class="literal">NULL</span>,</div><div class="line">                     <span class="keyword">const</span> <span class="keyword">char</span> *format = <span class="string">"%Y-%m-%d %H:%M:%S"</span>) &#123;</div><div class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">tm</span> <span class="title">tm</span> = &#123;</span><span class="number">0</span>&#125;;</div><div class="line">  <span class="keyword">if</span> (!date) &#123;</div><div class="line">    <span class="keyword">return</span> time(<span class="literal">NULL</span>);</div><div class="line">    <span class="comment">// return absl::ToUnixMillis(absl::Now()); // 毫秒</span></div><div class="line">    <span class="comment">// return absl::ToTimeT(absl::Now()); // 秒</span></div><div class="line">  &#125;</div><div class="line">  strptime(date, format, &amp;tm);</div><div class="line">  <span class="keyword">return</span> mktime(&amp;tm);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</div><div class="line">  <span class="keyword">char</span> date[] = <span class="string">"2018-02-10 19:00:00"</span>;</div><div class="line">  <span class="keyword">time_t</span> now = get_timestamp(date);</div><div class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"date "</span> &lt;&lt; date &lt;&lt; <span class="string">" to timestamp "</span> &lt;&lt; now &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">  </div><div class="line">  now = get_timestamp();</div><div class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"now timestamp "</span> &lt;&lt; now &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>程序运行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">date 2018-02-10 19:00:00 to timestamp 1518260400</div><div class="line">now timestamp 1521676868</div></pre></td></tr></table></figure></p>
-<p>参考链接：</p>
+<p>###参考链接：</p>
 <ol>
 <li><a href="http://sodino.com/2015/03/15/c-time/" target="_blank" rel="external">http://sodino.com/2015/03/15/c-time/</a></li>
 <li><a href="http://blog.csdn.net/yasaken/article/details/7429506" target="_blank" rel="external">http://blog.csdn.net/yasaken/article/details/7429506</a></li>
+<li>Unix时间戳<a href="http://tool.chinaz.com/Tools/unixtime.aspx" target="_blank" rel="external">http://tool.chinaz.com/Tools/unixtime.aspx</a></li>
 </ol>
 
       
@@ -583,7 +584,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -594,7 +595,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -605,7 +606,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
