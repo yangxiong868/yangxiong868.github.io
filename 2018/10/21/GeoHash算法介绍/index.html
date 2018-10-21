@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Brpc,Json," />
+  <meta name="keywords" content="算法," />
 
 
 
@@ -81,18 +81,21 @@
 
 
 
-<meta name="description" content="json2pb介绍brpc支持json和protobuf间的双向转化，实现于json2pb。 json2pb接口json2pb提供json到protobuf接口函数：JsonToProtoMessage，包含头文件：&amp;lt;json2pb/json_to_pb.h&amp;gt;，下面列举一个接口定义如下：1234bool JsonToProtoMessage(const std::string&amp;amp;">
-<meta name="keywords" content="Brpc,Json">
+<meta name="description" content="GeoHash IntroductionGeoHash将二维的经纬度转换成字符串，比如下图展示了北京9个区域的GeoHash字符串，分别是WX4ER，WX4G2、WX4G3等等，每一个字符串代表了某一矩形区域。也就是说，这个矩形区域内所有的点（经纬度坐标）都共享相同的GeoHash字符串，这样既可以保护隐私（只表示大概区域位置而不是具体的点），又比较容易做缓存，比如左上角这个区域内的用户不断发送位">
+<meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Brpc json和protobuf双向转换">
-<meta property="og:url" content="http://yoursite.com/2018/10/20/Brpc-json和protobuf双向转换/index.html">
+<meta property="og:title" content="GeoHash算法介绍">
+<meta property="og:url" content="http://yoursite.com/2018/10/21/GeoHash算法介绍/index.html">
 <meta property="og:site_name" content="Josh&#39;s Blog">
-<meta property="og:description" content="json2pb介绍brpc支持json和protobuf间的双向转化，实现于json2pb。 json2pb接口json2pb提供json到protobuf接口函数：JsonToProtoMessage，包含头文件：&amp;lt;json2pb/json_to_pb.h&amp;gt;，下面列举一个接口定义如下：1234bool JsonToProtoMessage(const std::string&amp;amp;">
+<meta property="og:description" content="GeoHash IntroductionGeoHash将二维的经纬度转换成字符串，比如下图展示了北京9个区域的GeoHash字符串，分别是WX4ER，WX4G2、WX4G3等等，每一个字符串代表了某一矩形区域。也就是说，这个矩形区域内所有的点（经纬度坐标）都共享相同的GeoHash字符串，这样既可以保护隐私（只表示大概区域位置而不是具体的点），又比较容易做缓存，比如左上角这个区域内的用户不断发送位">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-20T12:38:38.863Z">
+<meta property="og:image" content="http://yoursite.com/images/Geohash_instroduction.png">
+<meta property="og:image" content="http://yoursite.com/images/GeoHash_base32.png">
+<meta property="og:updated_time" content="2018-10-21T04:00:18.293Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Brpc json和protobuf双向转换">
-<meta name="twitter:description" content="json2pb介绍brpc支持json和protobuf间的双向转化，实现于json2pb。 json2pb接口json2pb提供json到protobuf接口函数：JsonToProtoMessage，包含头文件：&amp;lt;json2pb/json_to_pb.h&amp;gt;，下面列举一个接口定义如下：1234bool JsonToProtoMessage(const std::string&amp;amp;">
+<meta name="twitter:title" content="GeoHash算法介绍">
+<meta name="twitter:description" content="GeoHash IntroductionGeoHash将二维的经纬度转换成字符串，比如下图展示了北京9个区域的GeoHash字符串，分别是WX4ER，WX4G2、WX4G3等等，每一个字符串代表了某一矩形区域。也就是说，这个矩形区域内所有的点（经纬度坐标）都共享相同的GeoHash字符串，这样既可以保护隐私（只表示大概区域位置而不是具体的点），又比较容易做缓存，比如左上角这个区域内的用户不断发送位">
+<meta name="twitter:image" content="http://yoursite.com/images/Geohash_instroduction.png">
 
 
 
@@ -122,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/20/Brpc-json和protobuf双向转换/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/10/21/GeoHash算法介绍/"/>
 
 
 
 
 
-  <title>Brpc json和protobuf双向转换 | Josh's Blog</title>
+  <title>GeoHash算法介绍 | Josh's Blog</title>
   
 
 
@@ -289,7 +292,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/20/Brpc-json和protobuf双向转换/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/21/GeoHash算法介绍/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Josh Yang">
@@ -306,7 +309,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Brpc json和protobuf双向转换</h1>
+          <h1 class="post-title" itemprop="name headline">GeoHash算法介绍</h1>
         
 
         <div class="post-meta">
@@ -318,8 +321,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-20T20:09:56+08:00">
-                2018-10-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-21T11:49:08+08:00">
+                2018-10-21
               </time>
             
 
@@ -341,8 +344,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Brpc/" itemprop="url" rel="index">
-                    <span itemprop="name">Brpc</span>
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/空间索引/" itemprop="url" rel="index">
+                    <span itemprop="name">空间索引</span>
                   </a>
                 </span>
 
@@ -377,12 +391,99 @@
       
 
       
-        <h3 id="json2pb介绍"><a href="#json2pb介绍" class="headerlink" title="json2pb介绍"></a>json2pb介绍</h3><p>brpc支持json和protobuf间的双向转化，实现于<a href="https://github.com/brpc/brpc/tree/master/src/json2pb/" target="_blank" rel="external">json2pb</a>。</p>
-<h3 id="json2pb接口"><a href="#json2pb接口" class="headerlink" title="json2pb接口"></a>json2pb接口</h3><p>json2pb提供json到protobuf接口函数：<code>JsonToProtoMessage</code>，包含头文件：<code>&lt;json2pb/json_to_pb.h&gt;</code>，下面列举一个接口定义如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">JsonToProtoMessage</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; json,</span></span></div><div class="line"><span class="function"><span class="params">                        google::protobuf::Message* message,</span></span></div><div class="line"><span class="function"><span class="params">                        <span class="keyword">const</span> Json2PbOptions&amp; options,</span></span></div><div class="line"><span class="function"><span class="params">                        <span class="built_in">std</span>::<span class="built_in">string</span>* error = <span class="literal">NULL</span>)</span></span>;</div></pre></td></tr></table></figure></p>
-<p>json2pb提供protobuf到json接口函数：<code>ProtoMessageToJson</code>，包含头文件：<code>&lt;json2pb/pb_to_json.h&gt;</code>，下面列举一个接口定义如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ProtoMessageToJson</span><span class="params">(<span class="keyword">const</span> google::protobuf::Message&amp; message,</span></span></div><div class="line"><span class="function"><span class="params">                        <span class="built_in">std</span>::<span class="built_in">string</span>* json,</span></span></div><div class="line"><span class="function"><span class="params">                        <span class="keyword">const</span> Pb2JsonOptions&amp; options,</span></span></div><div class="line"><span class="function"><span class="params">                        <span class="built_in">std</span>::<span class="built_in">string</span>* error = <span class="literal">NULL</span>)</span></span>;</div></pre></td></tr></table></figure></p>
-<h3 id="json2pb应用"><a href="#json2pb应用" class="headerlink" title="json2pb应用"></a>json2pb应用</h3><p>brpc json2pb的接口应用示例如下，addressbook.proto在brpc源码test文件中。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;gflags/gflags.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;glog/logging.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;json2pb/json_to_pb.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;json2pb/pb_to_json.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ads/serving/Json/addressbook.pb.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"butil/iobuf.h"</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> addressbook::AddressBook;</div><div class="line"><span class="keyword">using</span> addressbook::Person;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">PopulateAddressBookMessage</span><span class="params">(AddressBook* address_book)</span> </span>&#123;</div><div class="line">  Person* person = address_book-&gt;add_person();</div><div class="line"></div><div class="line">  person-&gt;set_id(<span class="number">100</span>);</div><div class="line">  person-&gt;set_name(<span class="string">"Test"</span>);</div><div class="line">  person-&gt;set_data(<span class="number">-240000000</span>);</div><div class="line">  person-&gt;set_data32(<span class="number">6</span>);</div><div class="line">  person-&gt;set_data64(<span class="number">-1820000000</span>);</div><div class="line">  person-&gt;set_datadouble(<span class="number">123.456</span>);</div><div class="line">  person-&gt;set_datadouble_scientific(<span class="number">1.23456789e+08</span>);</div><div class="line">  person-&gt;set_datafloat_scientific(<span class="number">1.23456789e+08</span>);</div><div class="line">  person-&gt;set_datafloat(<span class="number">8.6123</span>);</div><div class="line">  person-&gt;set_datau32(<span class="number">60</span>);</div><div class="line">  person-&gt;set_datau64(<span class="number">960</span>);</div><div class="line">  person-&gt;set_databool(<span class="number">0</span>);</div><div class="line">  person-&gt;set_databyte(<span class="string">"welcome to china"</span>);</div><div class="line">  person-&gt;set_datafix32(<span class="number">1</span>);</div><div class="line">  person-&gt;set_datafix64(<span class="number">666</span>);</div><div class="line">  person-&gt;set_datasfix32(<span class="number">120</span>);</div><div class="line">  person-&gt;set_datasfix64(<span class="number">-802</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">JsonToProtoMessageTest</span><span class="params">(<span class="keyword">const</span> butil::IOBuf input,</span></span></div><div class="line"><span class="function"><span class="params">                            google::protobuf::Message* message)</span> </span>&#123;</div><div class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> error;</div><div class="line">  json2pb::Json2PbOptions options;</div><div class="line">  options.base64_to_bytes = <span class="literal">true</span>;</div><div class="line"></div><div class="line">  butil::<span class="function">IOBufAsZeroCopyInputStream <span class="title">stream</span><span class="params">(input)</span></span>;</div><div class="line">  <span class="keyword">if</span> (!json2pb::JsonToProtoMessage(&amp;stream, message, options, &amp;error)) &#123;</div><div class="line">    LOG(ERROR) &lt;&lt; <span class="string">"Failed to JsonToProtoMessage err:"</span> &lt;&lt; error;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ProtoMessageToJsonTest</span><span class="params">(<span class="keyword">const</span> google::protobuf::Message&amp; message,</span></span></div><div class="line"><span class="function"><span class="params">                            butil::IOBuf* output)</span> </span>&#123;</div><div class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> error;</div><div class="line">  json2pb::Pb2JsonOptions options;</div><div class="line">  options.enum_option = json2pb::OUTPUT_ENUM_BY_NUMBER;</div><div class="line">  options.bytes_to_base64 = <span class="literal">true</span>;</div><div class="line"></div><div class="line">  butil::<span class="function">IOBufAsZeroCopyOutputStream <span class="title">stream</span><span class="params">(output)</span></span>;</div><div class="line">  <span class="keyword">if</span> (!json2pb::ProtoMessageToJson(message, &amp;stream, options, &amp;error)) &#123;</div><div class="line">    LOG(ERROR) &lt;&lt; <span class="string">"Failed to ProtoMessageToJson err:"</span> &lt;&lt; error;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Json2PbTest</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="keyword">bool</span> result;</div><div class="line">  butil::IOBuf buf;</div><div class="line"></div><div class="line">  <span class="comment">// ProtoMessageToJsonTest</span></div><div class="line">  LOG(ERROR) &lt;&lt; <span class="string">"ProtoMessageToJsonTest......"</span>;</div><div class="line">  AddressBook address_book;</div><div class="line">  PopulateAddressBookMessage(&amp;address_book);</div><div class="line">  LOG(ERROR) &lt;&lt; <span class="string">"ProtoBuf:"</span> &lt;&lt; address_book.DebugString();</div><div class="line"></div><div class="line">  result = ProtoMessageToJsonTest(address_book, &amp;buf);</div><div class="line">  LOG(ERROR) &lt;&lt; <span class="string">"result: "</span> &lt;&lt; result &lt;&lt; <span class="string">" Json:"</span> &lt;&lt; buf;</div><div class="line"></div><div class="line">  <span class="comment">// ProtoMessageToJsonTest</span></div><div class="line">  LOG(ERROR) &lt;&lt; <span class="string">"JsonToProtoMessageTest......"</span>;</div><div class="line">  AddressBook address_book1;</div><div class="line">  result = JsonToProtoMessageTest(buf, &amp;address_book1);</div><div class="line">  LOG(ERROR) &lt;&lt; <span class="string">"result: "</span> &lt;&lt; result</div><div class="line">             &lt;&lt; <span class="string">"ProtoBuf:"</span> &lt;&lt; address_book1.DebugString();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span> </span>&#123;</div><div class="line">  google::InitGoogleLogging(argv[<span class="number">0</span>]);</div><div class="line">  FLAGS_logtostderr = <span class="number">1</span>;</div><div class="line"></div><div class="line">  Json2PbTest();</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>程序运行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">E1019 16:09:41.195989 26059 json2pb_test.cpp:73] ProtoMessageToJsonTest......</div><div class="line">E1019 16:09:41.196545 26059 json2pb_test.cpp:76] ProtoBuf:person &#123;</div><div class="line">  name: &quot;Test&quot;</div><div class="line">  id: 100</div><div class="line">  data: -240000000</div><div class="line">  data32: 6</div><div class="line">  data64: -1820000000</div><div class="line">  datadouble: 123.456</div><div class="line">  datafloat: 8.6123</div><div class="line">  datau32: 60</div><div class="line">  datau64: 960</div><div class="line">  databool: false</div><div class="line">  databyte: &quot;welcome to china&quot;</div><div class="line">  datafix32: 1</div><div class="line">  datafix64: 666</div><div class="line">  datasfix32: 120</div><div class="line">  datasfix64: -802</div><div class="line">  datafloat_scientific: 1.2345679e+08</div><div class="line">  datadouble_scientific: 123456789</div><div class="line">&#125;</div><div class="line">E1019 16:09:41.196682 26059 json2pb_test.cpp:78] result: 1 Json:&#123;&quot;person&quot;:[&#123;&quot;name&quot;:&quot;Test&quot;,&quot;id&quot;:100,&quot;data&quot;:-240000000,&quot;data32&quot;:6,&quot;data64&quot;:-1820000000,&quot;datadouble&quot;:123.456,&quot;datafloat&quot;:8.612299919128418,&quot;datau32&quot;:60,&quot;datau64&quot;:960,&quot;databool&quot;:false,&quot;databyte&quot;:&quot;d2VsY29tZSB0byBjaGluYQ==&quot;,&quot;datafix32&quot;:1,&quot;datafix64&quot;:666,&quot;datasfix32&quot;:120,&quot;datasfix64&quot;:-802,&quot;datafloat_scientific&quot;:123456792.0,&quot;datadouble_scientific&quot;:123456789.0&#125;]&#125;</div><div class="line">E1019 16:09:41.196696 26059 json2pb_test.cpp:81] JsonToProtoMessageTest......</div><div class="line">E1019 16:09:41.196838 26059 json2pb_test.cpp:84] result: 1ProtoBuf:person &#123;</div><div class="line">  name: &quot;Test&quot;</div><div class="line">  id: 100</div><div class="line">  data: -240000000</div><div class="line">  data32: 6</div><div class="line">  data64: -1820000000</div><div class="line">  datadouble: 123.456</div><div class="line">  datafloat: 8.6123</div><div class="line">  datau32: 60</div><div class="line">  datau64: 960</div><div class="line">  databool: false</div><div class="line">  databyte: &quot;welcome to china&quot;</div><div class="line">  datafix32: 1</div><div class="line">  datafix64: 666</div><div class="line">  datasfix32: 120</div><div class="line">  datasfix64: -802</div><div class="line">  datafloat_scientific: 1.2345679e+08</div><div class="line">  datadouble_scientific: 123456789</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p>1.<a href="https://github.com/brpc/brpc/blob/master/docs/cn/json2pb.md" target="_blank" rel="external">brpc json2pb 介绍</a><br>2.<a href="https://github.com/brpc/brpc/tree/master/src/json2pb/" target="_blank" rel="external">brpc json2pb 源码</a></p>
+        <h2 id="GeoHash-Introduction"><a href="#GeoHash-Introduction" class="headerlink" title="GeoHash Introduction"></a>GeoHash Introduction</h2><p>GeoHash将二维的经纬度转换成字符串，比如下图展示了北京9个区域的GeoHash字符串，分别是WX4ER，WX4G2、WX4G3等等，每一个字符串代表了某一矩形区域。也就是说，这个矩形区域内所有的点（经纬度坐标）都共享相同的GeoHash字符串，这样既可以保护隐私（只表示大概区域位置而不是具体的点），又比较容易做缓存，比如左上角这个区域内的用户不断发送位置信息请求餐馆数据，由于这些用户的GeoHash字符串都是WX4ER，所以可以把WX4ER当作key，把该区域的餐馆信息当作value来进行缓存，而如果不使用GeoHash的话，由于区域内的用户传来的经纬度是各不相同的，很难做缓存。<br><img src="/images/Geohash_instroduction.png" alt="@北京地区geohash示例 | center "></p>
+<h2 id="GeoHash-Algorithm"><a href="#GeoHash-Algorithm" class="headerlink" title="GeoHash Algorithm"></a>GeoHash Algorithm</h2><p>下面以北海公园为例介绍GeoHash算法的计算步骤</p>
+<h3 id="根据经纬度计算GeoHash二进制编码"><a href="#根据经纬度计算GeoHash二进制编码" class="headerlink" title="根据经纬度计算GeoHash二进制编码"></a>根据经纬度计算GeoHash二进制编码</h3><p>地球纬度区间是[-90,90]， 北海公园的纬度是39.928167，可以通过下面算法对纬度39.928167进行逼近编码:</p>
+<ol>
+<li>区间[-90,90]进行二分为[-90,0),[0,90]，称为左右区间，可以确定39.928167属于右区间[0,90]，给标记为1；</li>
+<li>接着将区间[0,90]进行二分为 [0,45),[45,90]，可以确定39.928167属于左区间 [0,45)，给标记为0；</li>
+<li>递归上述过程39.928167总是属于某个区间[a,b]。随着每次迭代区间[a,b]总在缩小，并越来越逼近39.928167；</li>
+<li>如果给定的纬度x（39.928167）属于左区间，则记录0，如果属于右区间则记录1，这样随着算法的进行会产生一个序列1011100，序列的长度跟给定的区间划分次数有关。<br>根据纬度算编码 </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">bit</th>
+<th style="text-align:center">min</th>
+<th style="text-align:center">mid</th>
+<th style="text-align:center">max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-90.000</td>
+<td style="text-align:center">0.000</td>
+<td style="text-align:center">90.000</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0.000</td>
+<td style="text-align:center">45.000</td>
+<td style="text-align:center">90.000</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0.000</td>
+<td style="text-align:center">22.500</td>
+<td style="text-align:center">45.000</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">22.500</td>
+<td style="text-align:center">33.750</td>
+<td style="text-align:center">45.000</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">33.7500</td>
+<td style="text-align:center">39.375</td>
+<td style="text-align:center">45.000</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">39.375</td>
+<td style="text-align:center">42.188</td>
+<td style="text-align:center">45.000</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">39.375</td>
+<td style="text-align:center">40.7815</td>
+<td style="text-align:center">42.188</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">39.375</td>
+<td style="text-align:center">40.07825</td>
+<td style="text-align:center">40.7815</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">39.375</td>
+<td style="text-align:center">39.726625</td>
+<td style="text-align:center">40.07825</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">39.726625</td>
+<td style="text-align:center">39.9024375</td>
+<td style="text-align:center">40.07825</td>
+</tr>
+</tbody>
+</table>
+<p>同理，地球经度区间是[-180,180]，可以对经度116.389550进行编码。</p>
+<h3 id="二进制组码"><a href="#二进制组码" class="headerlink" title="二进制组码"></a>二进制组码</h3><p>通过上述计算，纬度产生的编码为10111 00011，经度产生的编码为11010 01011。偶数位放经度，奇数位放纬度，把2串编码组合生成新串：11100 11101 00100 01111。</p>
+<p>最后使用用0-9、b-z（去掉a, i, l, o）这32个字母进行base32编码，首先将11100 11101 00100 01111转成十进制，对应着28、29、4、15，十进制对应的编码就是wx4g。同理，将编码转换成经纬度的解码算法与之相反，具体不再赘述。<br><img src="/images/GeoHash_base32.png" alt="@Base32编码 | center"></p>
+<h2 id="GeoHash代码"><a href="#GeoHash代码" class="headerlink" title="GeoHash代码"></a>GeoHash代码</h2><h3 id="GeoHash-CPP-API"><a href="#GeoHash-CPP-API" class="headerlink" title="GeoHash CPP API"></a>GeoHash CPP API</h3><p>本<a href="https://github.com/yangxiong868/libcpp" target="_blank" rel="external">Geohash lib库</a>的编解码函数介绍。<br>GeoHash经纬度到字符串的编码函数：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Encode</span><span class="params">(<span class="keyword">double</span> latitude, <span class="keyword">double</span> longitude, uint32 precision, <span class="built_in">std</span>::<span class="built_in">string</span>* geohash)</span></span>;</div></pre></td></tr></table></figure></p>
+<p>GeoHash字符串到经纬度的解码函数：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Decode</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; geohash, <span class="keyword">double</span>* latitude, <span class="keyword">double</span>* longitude)</span></span>;</div></pre></td></tr></table></figure></p>
+<h3 id="GeoHash-各语言代码"><a href="#GeoHash-各语言代码" class="headerlink" title="GeoHash 各语言代码"></a>GeoHash 各语言代码</h3><ol>
+<li>C/C++代码<br><a href="https://github.com/simplegeo/libgeohash" target="_blank" rel="external">https://github.com/simplegeo/libgeohash</a><br><a href="https://github.com/windoze/geohash-cpp" target="_blank" rel="external">https://github.com/windoze/geohash-cpp</a></li>
+<li>Python代码<br><a href="https://pypi.org/project/Geohash/#files" target="_blank" rel="external">https://pypi.org/project/Geohash/#files</a><br><a href="https://github.com/transitland/mapzen-geohash/blob/master/mzgeohash/geohash.py" target="_blank" rel="external">https://github.com/transitland/mapzen-geohash/blob/master/mzgeohash/geohash.py</a></li>
+<li>Java代码<br><a href="https://blog.csdn.net/sunrise_2013/article/details/42395261" target="_blank" rel="external">https://blog.csdn.net/sunrise_2013/article/details/42395261</a></li>
+<li>Go代码<br><a href="https://github.com/mmcloughlin/geohash" target="_blank" rel="external">https://github.com/mmcloughlin/geohash</a></li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://en.wikipedia.org/wiki/Geohash" target="_blank" rel="external">GeoHash维基百科</a><br><a href="http://www.cnblogs.com/LBSer/p/3310455.html" target="_blank" rel="external">GeoHash核心原理解析</a><br><a href="http://geohash.gofreerange.com/" target="_blank" rel="external">GeoHash演示</a></p>
 
       
     </div>
@@ -400,9 +501,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Brpc/" rel="tag"># Brpc</a>
-          
-            <a href="/tags/Json/" rel="tag"># Json</a>
+            <a href="/tags/算法/" rel="tag"># 算法</a>
           
         </div>
       
@@ -415,8 +514,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/24/Python进阶-JSON编码和解码/" rel="next" title="Python进阶-JSON编码和解码">
-                <i class="fa fa-chevron-left"></i> Python进阶-JSON编码和解码
+              <a href="/2018/10/20/Brpc-json和protobuf双向转换/" rel="next" title="Brpc json和protobuf双向转换">
+                <i class="fa fa-chevron-left"></i> Brpc json和protobuf双向转换
               </a>
             
           </div>
@@ -424,10 +523,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/21/GeoHash算法介绍/" rel="prev" title="GeoHash算法介绍">
-                GeoHash算法介绍 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -584,7 +679,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#json2pb介绍"><span class="nav-number">1.</span> <span class="nav-text">json2pb介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#json2pb接口"><span class="nav-number">2.</span> <span class="nav-text">json2pb接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#json2pb应用"><span class="nav-number">3.</span> <span class="nav-text">json2pb应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考链接"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GeoHash-Introduction"><span class="nav-number">1.</span> <span class="nav-text">GeoHash Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GeoHash-Algorithm"><span class="nav-number">2.</span> <span class="nav-text">GeoHash Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#根据经纬度计算GeoHash二进制编码"><span class="nav-number">2.1.</span> <span class="nav-text">根据经纬度计算GeoHash二进制编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二进制组码"><span class="nav-number">2.2.</span> <span class="nav-text">二进制组码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GeoHash代码"><span class="nav-number">3.</span> <span class="nav-text">GeoHash代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GeoHash-CPP-API"><span class="nav-number">3.1.</span> <span class="nav-text">GeoHash CPP API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GeoHash-各语言代码"><span class="nav-number">3.2.</span> <span class="nav-text">GeoHash 各语言代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
